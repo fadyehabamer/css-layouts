@@ -1,0 +1,45 @@
+body {
+    background-color: #eee;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.intro-parent-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro-parent-flex h1 {
+    font-size: 5em;
+}
+
+.intro-parent-flex h3 {
+    font-size: 3em;
+}
+
+.intro-parent-flex h5 {
+    font-size: 1em;
+}
+/* ------------------------------------------------------------- */
+.intro-parent-bootstrap .text h1 {
+    font-size: 40px;
+
+}
+.h1{
+    font-size: 5em;
+}
+.intro-parent-bootstrap h3 {
+    font-size: 3em !important;
+}
+
+.intro-parent-bootstrap h5 {
+    font-size: 1em !important;
+}
