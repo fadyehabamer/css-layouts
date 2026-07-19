@@ -1,30 +1,11 @@
-# Nextjs Ticket Layout
-> NEXT js Event Ticket 
-> 
-> Will be made as pure as possible
-> 
-> Final result : 90% same as original
+# Nextjs-Ticket-Layout
 
-* CSS new Properties 
-```css
-  /* to make gradient border */
-  
-  background-image : linear-grandient();
-  border-image-slice : 1
-```
+Next.JS Conference ticket layout
 
-* issues 
-  ```css
-  /* Not working for .ticket (but I Know why hahaha) */
-  border-radius : 8px 
- 
-  /* flex grow not working ( I dont know why ) for both .right & .left */
-  .left {
-    flex-grow : 3
-  }
-  
-  .right{
-    flex-grow : 1 
-  }
-  
-  ```
+### 🔗 [View Live Demo](https://fadyehabamer.github.io/css-layouts/Nextjs-Ticket-Layout/)
+
+**Built with:** CSS
+**Topics:** `nextjs`, `ticket`, `css`
+
+---
+↩ Part of the [**css-layouts**](../) collection · [all collections](https://github.com/fadyehabamer?tab=repositories) · [@fadyehabamer](https://github.com/fadyehabamer)
