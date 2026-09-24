@@ -24,3 +24,11 @@ function topfunc(){
     document.documentElement.scrollTop = 0 //chrome, mozila , opera
 
  }
+
+// keyboard support for the back-to-top control
+button.addEventListener("keydown", function(e){
+    if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault()
+        topfunc()
+    }
+})

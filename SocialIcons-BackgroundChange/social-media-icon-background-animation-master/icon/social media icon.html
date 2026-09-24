@@ -15,27 +15,27 @@
 
 <div class="nav">
     <ul class="tabs">
-        <li class="tabs_item tab tab_github tab_is-active">
+        <li class="tabs_item tab tab_github tab_is-active" role="button" tabindex="0">
             <div class="tab-circle"></div>
             <i class="fa fa-github tab_icon"></i>
             <span class="tab_name">Github</span>
         </li>
-        <li class="tabs_item tab tab_twitter">
+        <li class="tabs_item tab tab_twitter" role="button" tabindex="0">
             <div class="tab-circle"></div>
             <i class="fa fa-twitter tab_icon"></i>
             <span class="tab_name">Twitter</span>
         </li>
-        <li class="tabs_item tab tab_youtube">
+        <li class="tabs_item tab tab_youtube" role="button" tabindex="0">
             <div class="tab-circle"></div>
             <i class="fa fa-youtube tab_icon"></i>
             <span class="tab_name">Youtube</span>
         </li>
-        <li class="tabs_item tab tab_dribbble">
+        <li class="tabs_item tab tab_dribbble" role="button" tabindex="0">
             <div class="tab-circle"></div>
             <i class="fa fa-dribbble tab_icon"></i>
             <span class="tab_name">Dribbble</span>
         </li>
-        <li class="tabs_item tab tab_facebook">
+        <li class="tabs_item tab tab_facebook" role="button" tabindex="0">
             <div class="tab-circle"></div>
             <i class="fa fa-facebook tab_icon"></i>
             <span class="tab_name">Facebook</span>
@@ -57,6 +57,16 @@ document.body.style.background = activeColor;
 
 tabs.forEach(tab =>
 {
+    // keyboard support: Enter / Space activate a tab like a click
+    tab.addEventListener('keydown', function (e)
+    {
+        if (e.key === 'Enter' || e.key === ' ')
+        {
+            e.preventDefault();
+            this.click();
+        }
+    })
+
     tab.addEventListener('click', function()
     {
         let tl = new TimelineLite();

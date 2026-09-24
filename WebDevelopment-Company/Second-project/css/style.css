@@ -482,3 +482,14 @@ footer .subscribe-btn-2 {
       margin-top: -30px ;
     }
 }
+
+/* keyboard focus indicators for controls whose outline is removed above */
+.header-buttons a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+.card-footer a:focus-visible,
+.contact-us button:focus-visible {
+  outline: 2px solid #1b8db1;
+  outline-offset: 2px;
+}
