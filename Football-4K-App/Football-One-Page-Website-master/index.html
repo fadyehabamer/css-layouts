@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href='https://css.gg/heart.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Football4k</title>
@@ -11,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script
     src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -26,7 +27,7 @@
     <i class="fas fa-futbol"></i>
     <a href="">Football4K</a>
   </div>
-  <div id="bar" class="fas fa-bars">
+  <div id="bar" class="fas fa-bars" role="button" tabindex="0" aria-label="Toggle navigation">
     </div>
 </div>
 
@@ -44,8 +45,6 @@
 
 </div>
 
-    </div>
-
     <div class="homepage">
       <div class="text">
         <h1>Watch football matches at<br><h1 style="color:#3498db;">Football4k</h1></h1>
@@ -59,11 +58,10 @@
 
    
       <div class="image">
-      <img src="https://creativesoorma.com/public/uploads/preview/eden-hazard-png-image-with-transparent-background-11565846307lufbgmgnlw.png">
+      <img alt="Eden Hazard" src="https://creativesoorma.com/public/uploads/preview/eden-hazard-png-image-with-transparent-background-11565846307lufbgmgnlw.png">
 
       </div>
       </div>
-    </div>
 <div class="about">
   <h1>About </h1>
   <div class="aboutus">
@@ -118,24 +116,24 @@
       <h1>Latest Streams</h1>
 <div class="gallery">
     <div class="item">
-        <img src="https://as01.epimg.net/en/imagenes/2020/02/29/football/1583009127_911828_1583009207_noticia_normal_recorte1.jpg">
+        <img alt="" src="https://as01.epimg.net/en/imagenes/2020/02/29/football/1583009127_911828_1583009207_noticia_normal_recorte1.jpg">
         <div class="overlay">
-            <a href="www.google.com"><span  id="play" class="fas fa-play"></span></a>
+            <a href="https://www.google.com" aria-label="Play Barcelona V Real Madrid"><span  id="play" class="fas fa-play" aria-hidden="true"></span></a>
         </div>
         
         <h2>Barcelona V Real Madrid Livestream</h2>
       </div>
       <div class="item">
-<img src="https://www.vbetnews.com/wp-content/uploads/2020/02/885368-chelsea-vs-bayern-munich-1200x675.jpg">
+<img alt="" src="https://www.vbetnews.com/wp-content/uploads/2020/02/885368-chelsea-vs-bayern-munich-1200x675.jpg">
 <h2>Chelsea V Bayern Munich</h2>
 <div class="overlay">
-    <a href="www.google.com"><span  id="play" class="fas fa-play"></span></a>
+    <a href="https://www.google.com" aria-label="Play Chelsea V Bayern Munich"><span  id="play" class="fas fa-play" aria-hidden="true"></span></a>
 </div>
         </div>
         <div class="item">
-            <img src="https://img.bundesliga.com/tachyon/sites/2/2020/02/GettyImages-1199516028-scaled.jpg?crop=0px,75px,2560px,1441px&fit=1140">
+            <img alt="" src="https://img.bundesliga.com/tachyon/sites/2/2020/02/GettyImages-1199516028-scaled.jpg?crop=0px,75px,2560px,1441px&fit=1140">
             <div class="overlay">
-                <a href="www.google.com"><span  id="play" class="fas fa-play"></span></a>
+                <a href="https://www.google.com" aria-label="Play Paris Saint Germain vs Borussia Dortmund"><span  id="play" class="fas fa-play" aria-hidden="true"></span></a>
             </div>
 
             <h2>Paris Saint Germain vs Borussia Dortmund</h2>
@@ -143,19 +141,19 @@
           </div>
 
           <div class="item">
-              <img src="https://ak3.picdn.net/shutterstock/videos/1017223453/thumb/2.jpg">
+              <img alt="" src="https://ak3.picdn.net/shutterstock/videos/1017223453/thumb/2.jpg">
 
               <h2>Coming Soon</h2>
 
             </div>
             <div class="item">
-              <img src="https://ak3.picdn.net/shutterstock/videos/1017223453/thumb/2.jpg">
+              <img alt="" src="https://ak3.picdn.net/shutterstock/videos/1017223453/thumb/2.jpg">
 
               <h2>Coming Soon</h2>
 
             </div>
             <div class="item">
-              <img src="https://ak3.picdn.net/shutterstock/videos/1017223453/thumb/2.jpg">
+              <img alt="" src="https://ak3.picdn.net/shutterstock/videos/1017223453/thumb/2.jpg">
 
               <h2>Coming Soon</h2>
 
@@ -223,6 +221,13 @@
       $(document).ready(function(){
         $("#bar").click(function(){
           $(".navbar").toggle(1000, 'swing');
+        });
+        // Keyboard support for the menu toggle
+        $("#bar").on("keydown", function(e){
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            $(this).trigger("click");
+          }
         });
       });
       </script>
